@@ -1,0 +1,56 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "browser": {
+    "crypto": false
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.2",
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@next-auth/mongodb-adapter": "^1.0.3",
+    "@reduxjs/toolkit": "^1.8.2",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "file-upload-with-preview": "^5.0.6",
+    "formidable": "^2.0.1",
+    "framer-motion": "^6.3.11",
+    "js-cookie": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.7.0",
+    "next": "12.1.6",
+    "next-auth": "^4.3.4",
+    "next-redux-wrapper": "^7.0.5",
+    "nextjs-progressbar": "^0.0.14",
+    "nookies": "^2.5.2",
+    "rc-upload": "^4.3.4",
+    "react-dropzone": "^14.2.1",
+    "react-hook-form": "^7.32.1",
+    "react-icons": "^4.4.0",
+    "react-images-uploading": "^3.1.6",
+    "react-redux": "^8.0.2",
+    "react-uploader": "^1.8.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "17.0.42",
+    "@types/react": "18.0.12",
+    "@types/react-dom": "18.0.5",
+    "@types/react-pdf": "^5.7.2",
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "typescript": "4.7.3"
+  }
+}
