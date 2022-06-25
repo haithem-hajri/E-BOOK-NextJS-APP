@@ -22,7 +22,7 @@ const BookCard = (props: Object | any) => {
       borderWidth="1px"
       rounded="lg"
       shadow="lg"
-      h={["16rem", "18rem"]}
+      h={["18rem", "18rem"]}
       m={["1rem", "1rem"]}
     >
       <Image
