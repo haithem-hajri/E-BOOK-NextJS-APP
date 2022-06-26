@@ -66,7 +66,7 @@ const SignInComponent = () => {
   const onSubmit = (data: Object, e: any) => {
     setIsLoading(true);
     axios
-      .post("http://localhost:3000/api/user/login", data)
+      .post("/api/user/login", data)
       .then((res) => {
         console.log(res);
         // signIn()

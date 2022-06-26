@@ -68,7 +68,7 @@ const SignUpComponent = () => {
   const onSubmit = (data: Object) => {
     setIsLoading(true);
     axios
-      .post("http://localhost:3000/api/user/register", data)
+      .post("/api/user/register", data)
       .then((res) => {
         setIsLoading(false);
         cookie.set("token", res.data?.token)

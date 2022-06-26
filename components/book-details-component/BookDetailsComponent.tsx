@@ -41,7 +41,7 @@ const BookDetailsComponent = (props: any) => {
           <Image
             rounded={"md"}
             alt={"product image"}
-            src={book && "http://localhost:3000/api/image/" + book._id}
+            src={book && "/api/image/" + book._id}
             fit={"cover"}
             align={"center"}
             w={"100%"}
@@ -179,7 +179,7 @@ const BookDetailsComponent = (props: any) => {
 
           <Button
             as={"a"}
-            href={"http://localhost:3000/api/files/" + book._id}
+            href={"/api/files/" + book._id}
             rounded={"none"}
             w={"full"}
             mt={8}

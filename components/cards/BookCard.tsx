@@ -26,7 +26,7 @@ const BookCard = (props: Object | any) => {
       m={["1rem", "1rem"]}
     >
       <Image
-        src={book && "http://localhost:3000/api/image/" + book._id}
+        src={book && "/api/image/" + book._id}
         //book.imageUrl&&book.imageUrl
         alt={book.title && book.title}
         roundedTop="lg"
@@ -41,7 +41,7 @@ const BookCard = (props: Object | any) => {
             {book.category}
           </Badge>
         </Box>
-        <Link href={"/books/" + book._id}>
+        <Link href={"/books/" + book._id}> 
           <Text
             mt="1"
             fontWeight="semibold"
