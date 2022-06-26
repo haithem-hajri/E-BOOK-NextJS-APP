@@ -64,5 +64,4 @@ const Books = (props: any) => {
   );
 };
 
-export default Books; 
-
+export default Books;

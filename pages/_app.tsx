@@ -5,6 +5,7 @@ import { extendTheme } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import NextNProgress from "nextjs-progressbar";
 import { wrapper } from "../redux/store";
+import Head from "next/head";
 const colors = {
   brand: {
     100: "#ED64A6",
@@ -22,6 +23,12 @@ const theme = extendTheme({ colors });
 function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   return (
     <>
+      <Head>
+        <title>E-BOOK App</title>
+        <meta name="description" content="a simple movie app " />
+        <link rel="icon" href="/letter.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <NextNProgress color="#ED64A6" showOnShallow={true} />
       <SessionProvider session={session}>
         <ChakraProvider theme={theme}>

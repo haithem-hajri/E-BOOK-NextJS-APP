@@ -72,7 +72,7 @@ const AddBookComponents = () => {
       formData.append("rating", data.rating);
 
       axios
-        .post("http://localhost:3000/api/book", formData)
+        .post("/api/book", formData)
         .then((res) => {
           setIsLoading(false);
           toast({

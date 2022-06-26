@@ -20,26 +20,26 @@ import {
   useDisclosure,
   useMergeRefs,
   FormErrorMessage,
-  useToast
+  useToast,
 } from "@chakra-ui/react";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 import axios from "axios";
-import { useSession, signIn, signOut, getSession } from "next-auth/react"
-import { useRouter } from "next/router"
-import { parseCookies } from "nookies"
+import { useSession, signIn, signOut, getSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import { parseCookies } from "nookies";
 const cookie = require("js-cookie");
 const SignUpComponent = () => {
-  const toast = useToast () ; 
+  const toast = useToast();
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitted },
   } = useForm();
-  const { data: session } = useSession()
-  const router = useRouter()
-  const cookies = parseCookies()
+  const { data: session } = useSession();
+  const router = useRouter();
+  const cookies = parseCookies();
   const { isOpen, onToggle } = useDisclosure();
   const [isLoading, setIsLoading] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -49,14 +49,13 @@ const SignUpComponent = () => {
   );
   React.useEffect(() => {
     if (session) {
-      router.push("/")
+      router.push("/");
     }
 
     if (cookies?.user) {
-      router.push("/")
+      router.push("/");
     }
-  }, [router]) // eslint-disable-line
-
+  }, [router]); // eslint-disable-line
 
   const onClickReveal = () => {
     onToggle();
@@ -71,19 +70,19 @@ const SignUpComponent = () => {
       .post("/api/user/register", data)
       .then((res) => {
         setIsLoading(false);
-        cookie.set("token", res.data?.token)
-        cookie.set("user", JSON.stringify(res.data.user))
-        router.push("/")
+        cookie.set("token", res.data?.token);
+        cookie.set("user", JSON.stringify(res.data.user));
+        router.push("/");
       })
       .catch((err) => {
         setIsLoading(false);
         toast({
-          title: 'An error occurred.',
+          title: "An error occurred.",
           description: err.response.data.msg,
-          status: 'error',
+          status: "error",
           duration: 5000,
           isClosable: true,
-        })
+        });
       });
   };
   return (

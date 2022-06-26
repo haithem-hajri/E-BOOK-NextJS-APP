@@ -41,7 +41,7 @@ const BookCard = (props: Object | any) => {
             {book.category}
           </Badge>
         </Box>
-        <Link href={"/books/" + book._id}> 
+        <Link href={"/books/" + book._id}>
           <Text
             mt="1"
             fontWeight="semibold"

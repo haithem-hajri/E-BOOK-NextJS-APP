@@ -20,12 +20,12 @@ const Home: NextPage = ({ books }: any, props) => {
     ? session?.user
     : "";
 
-  return (
+  return ( 
     <div>
       <Head>
-        <title>Movies App</title>
-        <meta name="description" content="a simple movie app " />
-        <link rel="icon" href="/favicon.ico" />
+        <title>E-BOOK Home</title>
+        <meta name="description" content="a simple movie app " /> 
+        <link rel="icon" href="/letter.ico" />
       </Head>
       <Layout>
         <Box bg="#edf3f8">

@@ -195,18 +195,15 @@ const BookDetailsComponent = (props: any) => {
           >
             Download
           </Button>
-        </Stack> 
-        
-       
-          
+        </Stack>
       </SimpleGrid>
       <Stack justify={"center"} align="center" display={"flex"} mb={10}>
         <embed
-        style={{width:"100%" , height:"100vh"}}
+          style={{ width: "100%", height: "100vh" }}
           src={"http://localhost:3000/api/files/" + book._id}
-        //  onLoadSuccess={onDocumentLoadSuccess}
+          //  onLoadSuccess={onDocumentLoadSuccess}
         />
-        </Stack>
+      </Stack>
     </Container>
   );
 };
